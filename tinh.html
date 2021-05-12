@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh</title>
+    <h1>Caculator</h1>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2"><br>
+    <button onclick="addition()">Addition(+)</button>
+    <button onclick="subtration()">Subtraction(-)</button>
+    <button onclick="mul()">Multipliccation(x)</button>
+    <button onclick="div()">Divison(/)</button><br>
+    <p type="text" id="result"> </p>
+<script>
+    function addition()  {
+        let so1 = +document.getElementById("num1").value;
+        let so2 = +document.getElementById("num2").value;
+        let sum = so1 +so2
+        let tru = so1-so2
+        document.getElementById('result').innerHTML= "Result :" + sum
+
+}
+    function subtration() {
+        let so1 = +document.getElementById("num1").value;
+        let so2 = +document.getElementById("num2").value;
+        let tru = so1-so2
+        document.getElementById('result').innerHTML='Result :' +tru
+    }
+    function mul() {
+        let so1 = +document.getElementById("num1").value;
+        let so2 = +document.getElementById("num2").value;
+        let nhan = so1*so2
+        document.getElementById('result').innerHTML='Result :' +nhan
+    }
+    function div() {
+        let so1 = +document.getElementById("num1").value;
+        let so2 = +document.getElementById("num2").value;
+        let chia = so1/so2
+        document.getElementById('result').innerHTML='Result :' +chia
+    }
+</script>
+</body>
+</html>

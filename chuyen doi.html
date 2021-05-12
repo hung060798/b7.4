@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi</title>
+</head>
+<body>
+  <table width="20%">
+    <tr>
+      <td >Amount</td>
+      <td>From Currency</td>
+      <td>To Currency</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><input type="text" id="vo"></td>
+      <td>
+        <select id="fromCurrency">
+          <option value="usd">USD</option>
+          <option value="vnd">VND</option>
+        </select>
+      </td>
+      <td>
+        <select id="toCurrency">
+          <option value="vnd">VND</option>
+          <option value="usd">USD</option>
+        </select>
+      </td>
+      <td><button onclick="convert() ">Convert</button></td>
+    </tr>
+  </table>
+  <script>
+    function convert (){
+      let a= document.getElementById("vo").value
+      let sel1= document.getElementById('fromCurrency').value
+      let sel2= document.getElementById('toCurrency').value
+      if (sel1==sel2) {
+        alert("no hope" )
+      }
+      if (sel1=="vnd" && sel2=="usd"){
+      alert(a/24000)
+      }
+      if (sel1== "usd"&& sel2=="vnd"){
+        alert(a*24000)
+      }
+    }
+  </script>
+</body>
+</html>
